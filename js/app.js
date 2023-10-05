@@ -9,6 +9,10 @@ const totalKmDOMElement = document.getElementById('total-km');
 
 const ageDOMElement = document.getElementById('user-age');
 
+const userDOMElement = document.getElementById('user');
+
+const priceDOMElement = document.getElementById('price');
+
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
 // - prezzo biglietto 0.21€ / Km
@@ -40,4 +44,6 @@ submitDOMElement.addEventListener('click', function () {
   console.log(
     `Ciao ${userName}, il prezzo del tuo biglietto è: ${ticketPrice.toFixed(2)}`
   );
+  userDOMElement.innerHTML = `${userName}`;
+  priceDOMElement.innerHTML = `${ticketPrice.toFixed(2)} €`;
 });
