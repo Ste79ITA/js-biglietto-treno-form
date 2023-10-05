@@ -9,13 +9,17 @@
   <body>
     <section class="price-calculator">
       <div class="container">
-        <input type="text" placeholder="Nome e Cognome" />
-        <input type="text" placeholder="Km da percorrere" />
-        <select name="" id="age">
+        <input id="user-name" type="text" placeholder="Nome e Cognome" />
+        <input id="total-km" type="text" placeholder="Km da percorrere" />
+        <select name="" id="user-age">
           <option value="0.20">Minorenne</option>
           <option value="0">Maggiorenne</option>
           <option value="0.40">Over 65</option>
         </select>
+        <div>
+          <button type="submit" id="generate-ticket">Genera</button>
+          <button type="reset" id="clear-form">Annulla</button>
+        </div>
       </div>
     </section>
     <section class="your-ticket"></section>

@@ -1,9 +1,22 @@
 // # How much does my ticket cost? -FORM-
 
 // Il programma dovrà collezionare tramite input i dati forniti dall' utente: nome e cognome, Km da percorrere e fascia d'età.
+
 // - collezionare il nome e cognome e salvarlo in una costante.
-// - collezionare il numero di Km e salvarlo in una costante.
-// - collezionare il valore di fascia d'età e salvarlo in una costante.
+const submitDOMElement = document.getElementById('generate-ticket');
+
+submitDOMElement.addEventListener('click', function () {
+  const userName = document.getElementById('user-name').value;
+  console.log(userName);
+
+  // - collezionare il numero di Km e salvarlo in una costante.
+  const totalKm = document.getElementById('total-km').value;
+  console.log(totalKm);
+
+  // - collezionare il valore di fascia d'età e salvarlo in una costante.
+  const userAge = document.getElementById('user-age').value;
+  console.log(userAge);
+});
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
