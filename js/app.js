@@ -1,27 +1,18 @@
 // # How much does my ticket cost? -FORM-
 
 // Il programma dovrà collezionare tramite input i dati forniti dall' utente: nome e cognome, Km da percorrere e fascia d'età.
-
-// - collezionare il nome e cognome e salvarlo in una costante.
 const submitDOMElement = document.getElementById('generate-ticket');
 
-submitDOMElement.addEventListener('click', function () {
-  const userName = document.getElementById('user-name').value;
-  console.log(userName);
+const userNameDOMElement = document.getElementById('user-name');
 
-  // - collezionare il numero di Km e salvarlo in una costante.
-  const totalKm = document.getElementById('total-km').value;
-  console.log(totalKm);
+const totalKmDOMElement = document.getElementById('total-km');
 
-  // - collezionare il valore di fascia d'età e salvarlo in una costante.
-  const userAge = document.getElementById('user-age').value;
-  console.log(userAge);
-});
+const ageDOMElement = document.getElementById('user-age');
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
-
 // - prezzo biglietto 0.21€ / Km
+const basePrice = 0.21;
 
 // va applicato uno sconto del 20% per i minorenni
 
@@ -33,3 +24,20 @@ submitDOMElement.addEventListener('click', function () {
 
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 // Questo richiederà un minimo di ricerca.
+submitDOMElement.addEventListener('click', function () {
+  // - collezionare il nome e cognome e salvarlo in una costante.
+  const userName = userNameDOMElement.value;
+
+  // - collezionare il numero di Km e salvarlo in una costante.
+  const km = parseFloat(totalKmDOMElement.value);
+
+  // - collezionare il valore di fascia d'età e salvarlo in una costante.
+  const age = parseFloat(ageDOMElement.value);
+
+  // - prezzo biglietto
+  const ticketPrice = km * basePrice * age;
+
+  console.log(
+    `Ciao ${userName}, il prezzo del tuo biglietto è: ${ticketPrice.toFixed(2)}`
+  );
+});
