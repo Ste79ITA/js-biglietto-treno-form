@@ -4,6 +4,81 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: sans-serif;
+}
+
 body {
-  background-color: aqua;
+  background-color: #ba1550;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form {
+  padding: 30px 70px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+}
+
+.input-container {
+  display: flex;
+  gap: 40px;
+}
+
+.input {
+  text-align: center;
+}
+
+.input > :last-child {
+  border: 1px solid #ba1550;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.input > :last-child:focus {
+  outline: none;
+  border: 2px solid #ba1550;
+}
+
+.title {
+  color: white;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.button {
+  background-color: lightgray;
+  color: #ba1550;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.button:hover {
+  border-color: orange;
+}
+
+h5 {
+  color: #ba1550;
+  padding-bottom: 10px;
 }

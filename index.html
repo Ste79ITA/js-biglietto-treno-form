@@ -9,16 +9,33 @@
   <body>
     <section class="price-calculator">
       <div class="container">
-        <input id="user-name" type="text" placeholder="Nome e Cognome" />
-        <input id="total-km" type="text" placeholder="Km da percorrere" />
-        <select name="" id="user-age">
-          <option value="0.80">Minorenne</option>
-          <option value="1">Maggiorenne</option>
-          <option value="0.60">Over 65</option>
-        </select>
-        <div>
-          <button type="submit" id="generate-ticket">Genera</button>
-          <button type="reset" id="clear-form">Annulla</button>
+        <h1 class="title">Calcola il prezzo del tuo biglietto</h1>
+        <div class="form">
+          <div class="input-container">
+            <div class="input">
+              <h5>Nome Cognome</h5>
+              <input id="user-name" type="text" placeholder="Nome e Cognome" />
+            </div>
+            <div class="input">
+              <h5>Km da percorrere</h5>
+              <input id="total-km" type="text" placeholder="Km da percorrere" />
+            </div>
+            <div class="input">
+              <h5>Fascia d'età</h5>
+              <select name="" id="user-age">
+                <option value="0.80">Minorenne</option>
+                <option value="1">Maggiorenne</option>
+                <option value="0.60">Over 65</option>
+                c
+              </select>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="button" type="submit" id="generate-ticket">
+              Genera
+            </button>
+            <button class="button" type="reset" id="clear-form">Annulla</button>
+          </div>
         </div>
       </div>
     </section>
