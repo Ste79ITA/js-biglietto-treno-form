@@ -43,14 +43,18 @@ submitDOMElement.addEventListener('click', function () {
   // - prezzo biglietto
   const ticketPrice = parseFloat(km) * basePrice * age;
 
-  console.log(userName.lenght);
-  console.log(
-    `Ciao ${userName}, il prezzo del tuo biglietto è: ${ticketPrice.toFixed(2)}`
-  );
+  // console.log(
+  //   `Ciao ${userName}, il prezzo del tuo biglietto è: ${ticketPrice.toFixed(2)}`
+  // );
   // BONUS
-  console.log(km.lenght);
-  if (km <= 0 || userName == 0) {
-    alert('errore, compila i campi correttamente!');
+  if (km <= 0 || isNaN(km)) {
+    alert(
+      'errore, compila il campo "Km da percorrere" con un numero superiore a 0!'
+    );
+  } else if (userName === '') {
+    alert('errore, compila il campo nome!');
+  } else if (isNaN(age)) {
+    alert('errore, scegli un opzione di età!');
   } else {
     userDOMElement.innerHTML = `${userName}`;
     priceDOMElement.innerHTML = `${ticketPrice.toFixed(2)} €`;
@@ -58,8 +62,9 @@ submitDOMElement.addEventListener('click', function () {
 });
 
 clearDOMElement.addEventListener('click', function () {
-  userNameDOMElement.value = ' ';
-  totalKmDOMElement.value = ' ';
-  userDOMElement.innerHTML = ' ';
-  priceDOMElement.innerHTML = ' ';
+  userNameDOMElement.value = '';
+  totalKmDOMElement.value = '';
+  ageDOMElement.value = '';
+  userDOMElement.innerHTML = '';
+  priceDOMElement.innerHTML = '';
 });
